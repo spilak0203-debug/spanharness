@@ -1,0 +1,1 @@
+{"t":"2026-10-21T10:02:00+09:00","kind":"agent","project":"repo-a","cwd":"{ROOT}/work/repo-a/src","session":"sess1","agent":"spanharness:coder","agent_id":"ag1","model":"claude-sonnet-4-5-20250929","role_model":"sonnet","effort":"high","role_effort":"high","in":7,"out":3,"cache_read":50,"cache_write":0,"tools":0,"turns":1,"ms":0,"harness":"006494ff","missing":[]}

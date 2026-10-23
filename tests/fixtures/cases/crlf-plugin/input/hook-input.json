@@ -1,0 +1,1 @@
+{"hook_event_name":"SubagentStop","session_id":"sess1","cwd":"{ROOT}/work/repo-a/src","agent_id":"ag1","agent_type":"spanharness:coder","effort":{"level":"high"},"transcript_path":"{ROOT}/transcripts/main.jsonl","agent_transcript_path":"{ROOT}/transcripts/agent-ag1.jsonl","last_assistant_message":"not recorded"}

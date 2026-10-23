@@ -1,0 +1,22 @@
+exit 1
+contains-case.bad
+contains-one-missing.bad
+contains-two-files.bad
+ends-no-newline.bad
+ends-other.bad
+ends-partial-line.bad
+ends-trailing-blank.bad
+not-glob-any-file.bad
+not-hangul-escape.bad
+not-ignorecase.bad
+not-literal.bad
+not-lookahead.bad
+not-regex.bad
+once-overlap-four.bad
+once-twice.bad
+once-zero.bad
+section-level3-stays.bad
+section-missing.bad
+section-once.bad
+section-text-outside.bad
+section-twice.bad

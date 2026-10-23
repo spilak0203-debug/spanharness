@@ -1,0 +1,5 @@
+{"t":"2026-09-03T10:00:00+09:00","kind":"agent","project":"alpha","cwd":"C:\\work\\alpha","session":"s1","agent":"coder","agent_id":"id2026-09-03T10:00:00+09:00","model":"claude-sonnet-4-5-20250929","effort":"high","in":100,"out":10,"cache_read":1000,"cache_write":50,"tools":4,"turns":3,"ms":1000,"harness":"a1b2c3d4","missing":[]}
+{"t":"2026-09-04T10:00:00+09:00","kind":"agent","project":"alpha","cwd":"C:\\work\\alpha","session":"s1","agent":"coder","agent_id":"id2026-09-04T10:00:00+09:00","model":"claude-sonnet-4-5-20250929","effort":"high","in":300,"out":30,"cache_read":3000,"cache_write":150,"tools":8,"turns":5,"ms":3000,"harness":"a1b2c3d4","missing":[]}
+{"t":"2026-09-05T10:00:00+09:00","kind":"agent","proj
+{"t":"2026-09-06T10:00:00+09:00","kind":"agent","project":"beta","cwd":"C:\\work\\beta","session":"s1","agent":"reviewer","agent_id":"id2026-09-06T10:00:00+09:00","model":null,"effort":null,"in":null,"out":7,"cache_read":700,"cache_write":70,"tools":2,"turns":1,"ms":500,"harness":"a1b2c3d4","missing":["model","in"]}
+

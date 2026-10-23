@@ -1,0 +1,7 @@
+report out/default.md --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --project-dir {ROOT}/proj --now 2027-01-05T10:00:00+09:00
+report out/m1.md --months 1 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --project-dir {ROOT}/proj --now 2027-01-05T10:00:00+09:00
+report out/m3.md --months 3 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --project-dir {ROOT}/proj --now 2027-01-05T10:00:00+09:00
+report out/m120.md --months 120 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --project-dir {ROOT}/proj --now 2027-01-05T10:00:00+09:00
+report out/m09.md --months 09 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --project-dir {ROOT}/proj --now 2026-10-31T23:30:00-05:00
+report out/z.md --months 1 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --project-dir {ROOT}/proj --now 2026-12-31T23:59:59Z
+report out/m12.md --months 12 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --project-dir {ROOT}/proj --now 2027-01-05T10:00:00-12:00

@@ -1,0 +1,4 @@
+---
+model:
+effort: medium
+---

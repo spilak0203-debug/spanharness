@@ -1,0 +1,12 @@
+# Events
+- 2026-10-02 | alpha | fix-request | refactor · small | spanharness:coder | user: x
+- 2026-10-04 | ALPHA | review-block | feature · large | SpanHarness:Coder | blocked
+- 2026-10-06 | alpha | fix-request | chat · small | orchestrator | main under another name
+- 2026-10-08 | we|rd | redone | docs · small | doc-writer | pipe in the project
+- 2026-10-09 | (project unknown) | fix-request | docs · small | (role name unknown) | unknown names
+   - 2026-10-02 | alpha | surprise | x | coder | indented lines are trimmed
+- 2026-10-02 | alpha | fix-request | refactor · small | coder
+- 2026-10-02 | alpha | fix-request | refactor · small
+- 2026-10-02 | alpha |  | x | coder | empty signal
+- 2026-1-02 | alpha | fix-request | x | coder | bad date
+- 2026-10-02 | alpha | fix-request | x | coder | a | b | c  fact with more bars

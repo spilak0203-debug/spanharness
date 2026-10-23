@@ -1,0 +1,2 @@
+{"t":"2026-10-01T10:00:00+09:00","kind":"agent","project":"p\r\nq|r","cwd":"C:\\work\\p\r\nq|r","session":"s1","agent":"ro|le\nx","agent_id":"id2026-10-01T10:00:00+09:00","model":"claude|x","effort":"hi|gh","in":1,"out":1,"cache_read":1,"cache_write":1,"tools":1,"turns":1,"ms":1,"harness":"h|1","missing":[]}
+{"t":"2026-10-02T10:00:00+09:00","kind":"turn","project":"p\r\nq|r","cwd":"C:\\work\\p\r\nq|r","session":"s1","model":"claude|x","effort":"hi|gh","in":1,"out":1,"cache_read":1,"cache_write":1,"tools":1,"turns":1,"ms":1,"harness":"h|1","missing":[]}

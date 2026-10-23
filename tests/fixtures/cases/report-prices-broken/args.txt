@@ -1,0 +1,1 @@
+report --claude-dir {ROOT}/claude --plugin-root {ROOT}/plugin --project-dir {ROOT}/proj --now 2026-10-21T14:00:00+09:00 --months 1

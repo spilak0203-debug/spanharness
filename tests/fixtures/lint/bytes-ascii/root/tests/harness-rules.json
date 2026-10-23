@@ -1,0 +1,51 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "bom.bad",
+   "kind": "asciiOnly",
+   "paths": [
+    "bom.txt"
+   ]
+  },
+  {
+   "id": "accent.bad",
+   "kind": "asciiOnly",
+   "paths": [
+    "accent.txt"
+   ]
+  },
+  {
+   "id": "tab-cr-lf.ok",
+   "kind": "asciiOnly",
+   "paths": [
+    "ws.txt"
+   ]
+  },
+  {
+   "id": "control.bad",
+   "kind": "asciiOnly",
+   "paths": [
+    "ctl.txt"
+   ]
+  },
+  {
+   "id": "del.bad",
+   "kind": "asciiOnly",
+   "paths": [
+    "del.txt"
+   ]
+  },
+  {
+   "id": "invalid-utf8.bad",
+   "kind": "asciiOnly",
+   "paths": [
+    "inv.txt"
+   ]
+  }
+ ]
+}

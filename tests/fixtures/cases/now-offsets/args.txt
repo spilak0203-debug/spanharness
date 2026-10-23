@@ -1,0 +1,3 @@
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-12-31T23:59:59Z
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2027-01-01T00:00:00-05:00 < hook-input-2.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2027-01-01T00:00:00+05:45 < hook-input-3.json

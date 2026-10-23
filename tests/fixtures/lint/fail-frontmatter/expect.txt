@@ -1,0 +1,16 @@
+exit 1
+absent.bad
+comment.bad
+duplicate.bad
+equals-list-vs-scalar.bad
+equals-missing-key.bad
+equals-scalar-vs-list.bad
+equals-value.bad
+keys-extra.bad
+keys-order.bad
+nested.bad
+no-frontmatter.bad
+nonempty-empty.bad
+nonempty-missing.bad
+second-file.bad
+unclosed.bad

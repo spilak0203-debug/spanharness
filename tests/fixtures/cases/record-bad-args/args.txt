@@ -1,0 +1,7 @@
+record --now 2026-02-29T10:00:00Z --claude-dir {ROOT}/claude
+record --claude-dir {ROOT}/claude --now 2026-10-21T10:02:00
+record --claude-dir {ROOT}/claude --now 2026-10-21T10:02:00.5Z
+record --claude-dir {ROOT}/claude --bogus x
+record --claude-dir {ROOT}/claude --now
+record --claude-dir {ROOT}/claude extra
+record --claude-dir {ROOT}/claude --now 2026-10-21T10:02:00+14:30

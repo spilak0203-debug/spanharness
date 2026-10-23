@@ -1,0 +1,11 @@
+# Events
+- 2026-10-03 | alpha | fix-request | refactor · small | coder | user: wanted a rename
+- 2026-10-03 | alpha | redone | docs · small | coder | experiment notes redone
+- 2026-10-02 | alpha | fix-request | experiment · small | coder | a baseline run needed a fix
+- 2026-10-04 | Alpha | Review-Block | Experiment · large | CODER | reviewer blocked a try
+- 2026-10-01 | alpha | review-wrong | experiment · small | coder | a finding in an experiment was not a problem
+- 2026-10-04 | alpha | repeated-failure | experiment | coder | no size given
+- 2026-10-02 | alpha | Redone | Experiment · small | coder | a try was redone
+- 2026-10-05 | gamma | redone | experiment · small | coder | no run in that project
+- 2026-08-01 | alpha | redone | experiment · small | coder | before the period
+- 2026-10-02 | alpha | redone |  experiment  ·  small | coder | spaces around the work type

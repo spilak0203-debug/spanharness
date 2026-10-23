@@ -1,0 +1,6 @@
+exit 1
+only-extra.bad
+only-missing.bad
+only-no-dir.bad
+paths-dir.bad
+paths.bad

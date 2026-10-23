@@ -1,0 +1,16 @@
+{"type":"user","timestamp":"2026-10-21T11:00:00.000Z","message":{"role":"user","content":"old prompt"}}
+{"type":"assistant","timestamp":"2026-10-21T11:00:02.000Z","message":{"id":"p0","model":"claude-sonnet-4-5-20250929","content":[],"usage":{"input_tokens":100,"output_tokens":100,"cache_read_input_tokens":100,"cache_creation_input_tokens":100}}}
+{"type":"user","timestamp":"2026-10-21T11:10:00.000Z","message":{"role":"user","content":[{"type":"text","text":"real"}]},"origin":{"kind":"human"}}
+{"type":"assistant","timestamp":"2026-10-21T11:10:04.000Z","message":{"id":"p1","model":"claude-sonnet-4-5-20250929","content":[{"type":"tool_use","id":"t1"},{"type":"tool_use","id":"t2"}],"usage":{"input_tokens":1,"output_tokens":2,"cache_read_input_tokens":3,"cache_creation_input_tokens":4}}}
+{"type":"user","timestamp":"2026-10-21T11:10:05.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"t1","content":"ok"}]}}
+{"type":"user","timestamp":"2026-10-21T11:10:06.000Z","message":{"role":"user","content":"meta"},"isMeta":true}
+{"type":"user","timestamp":"2026-10-21T11:10:07.000Z","message":{"role":"user","content":"peer"},"origin":{"kind":"peer"}}
+{"type":"user","timestamp":"2026-10-21T11:10:08.000Z","message":{"role":"user","content":"summary"},"isCompactSummary":true}
+{"type":"user","timestamp":"2026-10-21T11:10:09.000Z","message":{"role":"user","content":"  \t "}}
+{"type":"user","timestamp":"2026-10-21T11:10:09.500Z","message":{"role":"user","content":123}}
+{"type":"user","timestamp":"2026-10-21T11:10:09.600Z","message":{"role":"user","content":[]}}
+{"type":"user","timestamp":"2026-10-21T11:10:09.700Z","message":{"role":"user","content":[{"type":"tool_result","content":"x"},"text",5]}}
+{"type":"user","timestamp":"2026-10-21T11:10:09.800Z"}
+{"type":"user","timestamp":"2026-10-21T11:10:09.900Z","message":{"role":"user","content":"meta false is a prompt?"},"isMeta":"true"}
+{"type":"assistant","timestamp":"2026-10-21T11:10:12.000Z","message":{"id":"p2","model":"claude-sonnet-4-5-20250929","content":[],"usage":{"input_tokens":10,"output_tokens":20,"cache_read_input_tokens":30,"cache_creation_input_tokens":40}}}
+{"type":"system","timestamp":"2026-10-21T11:55:00.000Z","subtype":"turn_duration"}

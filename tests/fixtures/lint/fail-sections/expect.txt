@@ -1,0 +1,8 @@
+exit 1
+exact-extra.bad
+exact-missing.bad
+exact-order.bad
+one-of-two-files.bad
+order-missing.bad
+order-prefix-only.bad
+order-wrong.bad

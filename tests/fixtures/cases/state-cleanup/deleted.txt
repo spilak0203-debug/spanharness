@@ -1,0 +1,4 @@
+claude/lessons/state/agent-.json
+claude/lessons/state/agent-old.json
+claude/lessons/state/turn-edge-del.json
+claude/lessons/state/turn-old.json

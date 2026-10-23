@@ -1,0 +1,1 @@
+record --claude-dir {ROOT}/claude --plugin-root {ROOT}/no-such-plugin --now 2026-10-21T10:02:00+09:00

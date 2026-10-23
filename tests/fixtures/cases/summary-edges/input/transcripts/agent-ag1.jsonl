@@ -1,0 +1,9 @@
+{"type":"user","timestamp":"2026-10-21T10:00:00.000Z","message":{"role":"user","content":"hi"}}
+{"type":"assistant","timestamp":"2026-10-21T10:00:01.000Z","message":{"id":"e1","model":"claude-a","usage":{"input_tokens":7.9,"output_tokens":-7.9,"cache_read_input_tokens":true,"cache_creation_input_tokens":"5"}}}
+{"type":"assistant","timestamp":"2026-10-21T10:00:02.000Z","message":{"id":"e1","model":"<synthetic>","usage":{"input_tokens":null,"output_tokens":null,"cache_read_input_tokens":4}}}
+{"type":"assistant","timestamp":"2026-10-21T10:00:03.000Z","message":{"model":"  ","content":[{"type":"tool_use"},{"type":"tool_use","id":" "},{"type":"text"}],"usage":{"input_tokens":1000.0}}}
+{"type":"assistant","timestamp":"2026-10-21T10:00:04.000Z","message":{"content":[{"type":"tool_use","id":"same"},{"type":"tool_use","id":"same"}],"usage":[]}}
+{"type":"assistant","timestamp":"2026-10-21T10:00:05.000Z","message":"not an object"}
+{"type":"assistant","timestamp":"2026-10-21T10:00:05.500Z","message":{"id":"e9","content":"text","model":"claude-b-last"}}
+{"type":" assistant","timestamp":"2026-10-21T10:00:06.000Z","message":{"id":"ignored"}}
+{"timestamp":"2026-10-21T10:00:07.000Z","message":{"id":"ignored2"}}

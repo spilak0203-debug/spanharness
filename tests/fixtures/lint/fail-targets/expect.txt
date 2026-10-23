@@ -1,0 +1,10 @@
+exit 1
+case-sensitive.bad
+exclude-all.bad
+glob-empty-mustnot.bad
+glob-empty.bad
+literal-missing-with-other.bad
+literal-missing.bad
+no-class.bad
+no-question-mark.bad
+star-not-slash.bad

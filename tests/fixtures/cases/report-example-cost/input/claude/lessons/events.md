@@ -1,0 +1,14 @@
+# Events
+- 2026-10-02 | alpha | fix-request | refactor · small | coder | user: wanted a rename
+- 2026-10-02 | Alpha | Review-Block | feature · large | CODER | reviewer blocked
+- 2026-10-02 | alpha | surprise | feature · small | coder | a signal word with no column of its own
+- 2026-10-03 | alpha | fix-request | docs · small | coder | user: asked for a fix
+- 2026-10-04 | alpha | fix-request | docs · small | coder | two models that day
+- 2026-10-04 | alpha | redone | docs · small | coder | two models that day
+- 2026-10-05 | alpha | review-wrong | experiment · small | coder | the finding was not a problem
+- 2026-10-06 | beta | fix-request | docs · small | coder | another project, the same model row
+- 2026-10-07 | alpha | fix-request | chat · small | main | user: asked again
+- 2026-10-08 | alpha | repeated-failure | docs · small | reviewer | a model with no known price
+- 2026-10-03 | alpha | redone | experiment · small | coder | an expected iteration
+- 2026-10-12 | alpha | fix-request | docs · small | coder | no coder run that day
+- not a date | alpha | fix-request | docs · small | coder | not in the format

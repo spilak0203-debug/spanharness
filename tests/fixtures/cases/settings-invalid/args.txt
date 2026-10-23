@@ -1,0 +1,1 @@
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj

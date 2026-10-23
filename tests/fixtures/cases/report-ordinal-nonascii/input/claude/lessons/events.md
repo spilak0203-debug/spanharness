@@ -1,0 +1,3 @@
+- 2026-10-02 | ΟΔΟΣ | fix-request | a · b | ΡΟΛ | final sigma is not special: joins the run with sigma
+- 2026-10-03 | ΟΔΟΣ | fix-request | a · b | ΡΟΛ | no join with the run that has a final sigma
+- 2026-10-01 | É | redone | a · b | ρολ | upper case with an accent

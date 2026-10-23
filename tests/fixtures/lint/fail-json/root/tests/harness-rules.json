@@ -1,0 +1,156 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "equals-type.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "n",
+   "equals": "3"
+  },
+  {
+   "id": "equals-bool-vs-number.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "flag",
+   "equals": 1
+  },
+  {
+   "id": "equals-missing.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "nothing",
+   "equals": 1
+  },
+  {
+   "id": "equals-array-index-out.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "list.5",
+   "equals": 1
+  },
+  {
+   "id": "equals-object-key-on-array.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "list.name",
+   "equals": 1
+  },
+  {
+   "id": "equals-array-value.ok",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "list",
+   "equals": [
+    1,
+    2
+   ]
+  },
+  {
+   "id": "equals-null.ok",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "nil",
+   "equals": null
+  },
+  {
+   "id": "equals-index.ok",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "list.1",
+   "equals": 2
+  },
+  {
+   "id": "any-none.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "words.*",
+   "anyContains": "zzz"
+  },
+  {
+   "id": "any-non-string.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "list.*",
+   "anyContains": "1"
+  },
+  {
+   "id": "any-empty-resolve.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "nothing.*",
+   "anyContains": "a"
+  },
+  {
+   "id": "any-case.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "words.*",
+   "anyContains": "ALPHA"
+  },
+  {
+   "id": "any.ok",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "words.*",
+   "anyContains": "lph"
+  },
+  {
+   "id": "any-scalar-on-star.bad",
+   "kind": "json",
+   "paths": [
+    "d.json"
+   ],
+   "path": "n.*",
+   "anyContains": "3"
+  },
+  {
+   "id": "invalid-json.bad",
+   "kind": "json",
+   "paths": [
+    "broken.json"
+   ],
+   "path": "a",
+   "equals": 1
+  },
+  {
+   "id": "bom.ok",
+   "kind": "json",
+   "paths": [
+    "bom.json"
+   ],
+   "path": "a",
+   "equals": 1
+  }
+ ]
+}

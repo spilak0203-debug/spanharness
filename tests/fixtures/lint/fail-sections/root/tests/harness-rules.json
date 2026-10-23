@@ -1,0 +1,128 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "order-wrong.bad",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "sections": [
+    "## Three",
+    "## One"
+   ]
+  },
+  {
+   "id": "order-missing.bad",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "sections": [
+    "## One",
+    "## Nine"
+   ]
+  },
+  {
+   "id": "order-gap.ok",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "sections": [
+    "## One",
+    "## Three"
+   ]
+  },
+  {
+   "id": "order-prefix-only.bad",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "sections": [
+    "## On"
+   ]
+  },
+  {
+   "id": "exact-extra.bad",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "exact": true,
+   "sections": [
+    "## One",
+    "## Two"
+   ]
+  },
+  {
+   "id": "exact-missing.bad",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "exact": true,
+   "sections": [
+    "## One",
+    "## Two",
+    "## Three",
+    "## Four"
+   ]
+  },
+  {
+   "id": "exact-order.bad",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "exact": true,
+   "sections": [
+    "## Two",
+    "## One",
+    "## Three"
+   ]
+  },
+  {
+   "id": "exact.ok",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "exact": true,
+   "sections": [
+    "## One",
+    "## Two",
+    "## Three"
+   ]
+  },
+  {
+   "id": "level3-ignored.ok",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md"
+   ],
+   "exact": true,
+   "sections": [
+    "## One",
+    "## Two",
+    "## Three"
+   ]
+  },
+  {
+   "id": "one-of-two-files.bad",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "d.md",
+    "e.md"
+   ],
+   "sections": [
+    "## One"
+   ]
+  }
+ ]
+}

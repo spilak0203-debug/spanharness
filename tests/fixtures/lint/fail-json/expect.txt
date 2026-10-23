@@ -1,0 +1,12 @@
+exit 1
+any-case.bad
+any-empty-resolve.bad
+any-non-string.bad
+any-none.bad
+any-scalar-on-star.bad
+equals-array-index-out.bad
+equals-bool-vs-number.bad
+equals-missing.bad
+equals-object-key-on-array.bad
+equals-type.bad
+invalid-json.bad

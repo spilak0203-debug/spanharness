@@ -1,0 +1,33 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "core.ok",
+   "kind": "files",
+   "paths": [
+    "a.md"
+   ]
+  },
+  {
+   "id": "later-missing.bad",
+   "kind": "files",
+   "group": "later",
+   "paths": [
+    "hooks/hooks.json"
+   ]
+  },
+  {
+   "id": "later-contains.bad",
+   "kind": "contains",
+   "group": "later",
+   "paths": [
+    "a.md"
+   ],
+   "text": "absent"
+  }
+ ]
+}

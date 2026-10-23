@@ -1,0 +1,150 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "literal-missing.bad",
+   "kind": "contains",
+   "paths": [
+    "gone.md"
+   ],
+   "text": "x"
+  },
+  {
+   "id": "literal-missing-with-other.bad",
+   "kind": "contains",
+   "paths": [
+    "a.md",
+    "gone.md"
+   ],
+   "text": "x"
+  },
+  {
+   "id": "glob-empty.bad",
+   "kind": "contains",
+   "paths": [
+    "nodir/*.md"
+   ],
+   "text": "x"
+  },
+  {
+   "id": "glob-empty-mustnot.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "nodir/**"
+   ],
+   "text": "x"
+  },
+  {
+   "id": "exclude-all.bad",
+   "kind": "contains",
+   "paths": [
+    "a.md"
+   ],
+   "exclude": [
+    "a.md"
+   ],
+   "text": "x"
+  },
+  {
+   "id": "star-not-slash.bad",
+   "kind": "contains",
+   "paths": [
+    "dir/*.md"
+   ],
+   "text": "deep-only",
+   "exclude": []
+  },
+  {
+   "id": "star-only-top.ok",
+   "kind": "contains",
+   "paths": [
+    "dir/*.md"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "starstar-below.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "dir/**"
+   ],
+   "text": "zzz"
+  },
+  {
+   "id": "starstar-middle.ok",
+   "kind": "contains",
+   "paths": [
+    "dir/**/in.md"
+   ],
+   "text": "deep-only"
+  },
+  {
+   "id": "starstar-zero-dirs.ok",
+   "kind": "contains",
+   "paths": [
+    "dir/**/top.md"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "star-in-name.ok",
+   "kind": "contains",
+   "paths": [
+    "dir/t*p.md"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "star-matches-empty.ok",
+   "kind": "contains",
+   "paths": [
+    "dir/top*.md"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "no-question-mark.bad",
+   "kind": "contains",
+   "paths": [
+    "dir/to?.md"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "no-class.bad",
+   "kind": "contains",
+   "paths": [
+    "dir/[t]op.md"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "dot-git-excluded.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "**"
+   ],
+   "regex": "inside-g[i]t"
+  },
+  {
+   "id": "case-sensitive.bad",
+   "kind": "contains",
+   "paths": [
+    "DIR/top.md"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "dot-files-are-files.ok",
+   "kind": "contains",
+   "paths": [
+    ".claude-plugin/p.json"
+   ],
+   "text": "{"
+  }
+ ]
+}

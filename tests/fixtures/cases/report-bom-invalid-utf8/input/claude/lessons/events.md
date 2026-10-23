@@ -1,0 +1,2 @@
+ï»¿- 2026-10-01 | alÿpha | fix-request | a Â· b | coder | fact with þ bad byte
+- 2026-10-01 | alphaÿ | redone | a Â· b | coder | no join

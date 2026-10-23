@@ -1,0 +1,1 @@
+report --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00

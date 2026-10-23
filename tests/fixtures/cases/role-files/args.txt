@@ -1,0 +1,12 @@
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h0.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h1.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h2.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h3.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h4.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h5.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h6.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h7.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h8.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h9.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h10.json
+record --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T10:02:00+09:00 --project-dir {ROOT}/proj < h11.json

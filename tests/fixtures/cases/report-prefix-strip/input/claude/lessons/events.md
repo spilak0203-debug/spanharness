@@ -1,0 +1,4 @@
+- 2026-10-01 | alpha | fix-request | a · b | spanharness:coder | joined to coder
+- 2026-10-02 | alpha | fix-request | a · b | coder | role case differs from the run: day key joins, role is exact
+- 2026-10-03 | alpha | fix-request | a · b | spanharness: | prefix only stays
+- 2026-10-06 | ALPHA | fix-request | a · b | Coder | upper case

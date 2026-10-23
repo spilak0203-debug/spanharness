@@ -1,0 +1,24 @@
+[2] report --months 0 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months 121 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months x --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months -1 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months " 3" --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months +3 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months 1.0 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months ٣ --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months 0x10 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months "" --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --months 99999999999999999999999999 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report a.md b.md --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --bogus --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --bogus x --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report "" --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --now bad
+[2] report --now 2026-10-21T14:00:00
+[2] report --claude-dir
+[2] report --months=2 --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report out.md --months 2 extra --claude-dir {ROOT}/claude --plugin-root {PLUGIN} --now 2026-10-21T14:00:00+09:00
+[2] report --now 2026-02-30T10:00:00Z
+[2] report --now 2026-10-21T25:00:00Z
+[2] report --now 2026-10-21T14:00:00+15:00

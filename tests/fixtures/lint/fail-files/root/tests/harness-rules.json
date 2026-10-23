@@ -1,0 +1,72 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "paths.bad",
+   "kind": "files",
+   "paths": [
+    "docs/a.md",
+    "docs/missing.md"
+   ]
+  },
+  {
+   "id": "paths.ok",
+   "kind": "files",
+   "paths": [
+    "docs/a.md"
+   ]
+  },
+  {
+   "id": "paths-dir.bad",
+   "kind": "files",
+   "paths": [
+    "docs"
+   ]
+  },
+  {
+   "id": "only-extra.bad",
+   "kind": "files",
+   "dir": "agents",
+   "only": [
+    "a.md"
+   ]
+  },
+  {
+   "id": "only-missing.bad",
+   "kind": "files",
+   "dir": "agents",
+   "only": [
+    "a.md",
+    "b.md",
+    "c.md"
+   ]
+  },
+  {
+   "id": "only-no-dir.bad",
+   "kind": "files",
+   "dir": "nowhere",
+   "only": [
+    "a.md"
+   ]
+  },
+  {
+   "id": "only-ok.ok",
+   "kind": "files",
+   "dir": "agents",
+   "only": [
+    "a.md",
+    "b.md"
+   ]
+  },
+  {
+   "id": "only-empty-dir.ok",
+   "kind": "files",
+   "dir": "empty",
+   "only": []
+  }
+ ]
+}

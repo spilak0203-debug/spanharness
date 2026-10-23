@@ -1,0 +1,4 @@
+exit 1
+cr-in-literal.bad
+invalid-utf8-replacement-char.bad
+section-crlf-outside.bad

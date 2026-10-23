@@ -1,0 +1,34 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "later-present.ok",
+   "kind": "files",
+   "group": "later",
+   "paths": [
+    "hooks/hooks.json",
+    "scripts/s.ps1"
+   ]
+  },
+  {
+   "id": "later-ascii.ok",
+   "kind": "asciiOnly",
+   "group": "later",
+   "paths": [
+    "scripts/s.ps1"
+   ]
+  },
+  {
+   "id": "later-ascii-stub.bad",
+   "kind": "asciiOnly",
+   "group": "later",
+   "paths": [
+    "scripts/utf.ps1"
+   ]
+  }
+ ]
+}

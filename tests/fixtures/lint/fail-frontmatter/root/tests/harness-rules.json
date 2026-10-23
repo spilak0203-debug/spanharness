@@ -1,0 +1,241 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "keys-order.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "keys": [
+    "model",
+    "name",
+    "list"
+   ]
+  },
+  {
+   "id": "keys-extra.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "keys": [
+    "name",
+    "model"
+   ]
+  },
+  {
+   "id": "keys.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "keys": [
+    "name",
+    "model",
+    "list"
+   ]
+  },
+  {
+   "id": "equals-value.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "equals": {
+    "model": "opus"
+   }
+  },
+  {
+   "id": "equals-missing-key.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "equals": {
+    "color": "red"
+   }
+  },
+  {
+   "id": "equals-list-vs-scalar.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "equals": {
+    "list": "1"
+   }
+  },
+  {
+   "id": "equals-scalar-vs-list.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "equals": {
+    "model": [
+     "sonnet"
+    ]
+   }
+  },
+  {
+   "id": "equals-list.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "equals": {
+    "list": [
+     "1",
+     "2"
+    ]
+   }
+  },
+  {
+   "id": "absent.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "absent": [
+    "tools",
+    "model"
+   ]
+  },
+  {
+   "id": "absent.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "absent": [
+    "tools"
+   ]
+  },
+  {
+   "id": "nonempty-empty.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "empty.md"
+   ],
+   "nonEmpty": [
+    "name"
+   ]
+  },
+  {
+   "id": "nonempty-missing.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "nonEmpty": [
+    "color"
+   ]
+  },
+  {
+   "id": "nonempty.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md"
+   ],
+   "nonEmpty": [
+    "name",
+    "list"
+   ]
+  },
+  {
+   "id": "duplicate.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "dup.md"
+   ],
+   "nonEmpty": [
+    "name"
+   ]
+  },
+  {
+   "id": "no-frontmatter.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "plain.md"
+   ],
+   "nonEmpty": [
+    "name"
+   ]
+  },
+  {
+   "id": "unclosed.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "unclosed.md"
+   ],
+   "nonEmpty": [
+    "name"
+   ]
+  },
+  {
+   "id": "comment.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "comment.md"
+   ],
+   "nonEmpty": [
+    "name"
+   ]
+  },
+  {
+   "id": "nested.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "nested.md"
+   ],
+   "nonEmpty": [
+    "name"
+   ]
+  },
+  {
+   "id": "second-file.bad",
+   "kind": "frontmatter",
+   "paths": [
+    "good.md",
+    "dup.md"
+   ],
+   "keys": [
+    "name",
+    "model",
+    "list"
+   ]
+  },
+  {
+   "id": "quoted.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "quoted.md"
+   ],
+   "equals": {
+    "name": "a b",
+    "empty": "",
+    "open": "\"x",
+    "tail": "'single'"
+   }
+  },
+  {
+   "id": "crlf.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "crlf.md"
+   ],
+   "equals": {
+    "name": "crlf",
+    "list": [
+     "x",
+     "y"
+    ]
+   }
+  }
+ ]
+}

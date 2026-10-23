@@ -1,0 +1,109 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "crlf.ok",
+   "kind": "contains",
+   "paths": [
+    "crlf.md"
+   ],
+   "text": "one\ntwo\nthree"
+  },
+  {
+   "id": "lone-cr.ok",
+   "kind": "contains",
+   "paths": [
+    "cr.md"
+   ],
+   "text": "one\ntwo\nthree"
+  },
+  {
+   "id": "mixed-ends.ok",
+   "kind": "endsWithLine",
+   "paths": [
+    "mixed.md"
+   ],
+   "line": "three"
+  },
+  {
+   "id": "bom.ok",
+   "kind": "contains",
+   "paths": [
+    "bom.md"
+   ],
+   "text": "\nbody\n"
+  },
+  {
+   "id": "bom-first-line.ok",
+   "kind": "endsWithLine",
+   "paths": [
+    "bom.md"
+   ],
+   "line": "body"
+  },
+  {
+   "id": "cr-in-literal.bad",
+   "kind": "contains",
+   "paths": [
+    "crlf.md"
+   ],
+   "text": "one\r\ntwo"
+  },
+  {
+   "id": "once-crlf.ok",
+   "kind": "containsOnce",
+   "paths": [
+    "crlf.md"
+   ],
+   "text": "\ntwo\n"
+  },
+  {
+   "id": "section-crlf.ok",
+   "kind": "contains",
+   "paths": [
+    "sec.md"
+   ],
+   "section": "## S",
+   "text": "inside"
+  },
+  {
+   "id": "section-crlf-outside.bad",
+   "kind": "contains",
+   "paths": [
+    "sec.md"
+   ],
+   "section": "## S",
+   "text": "outside"
+  },
+  {
+   "id": "front-bom.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "fm.md"
+   ],
+   "equals": {
+    "name": "x"
+   }
+  },
+  {
+   "id": "invalid-utf8-is-replaced.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "inv.md"
+   ],
+   "text": "bad"
+  },
+  {
+   "id": "invalid-utf8-replacement-char.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "inv.md"
+   ],
+   "text": "\ufffd"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+﻿{"t":"2026-10-02T10:00:00+09:00","kind":"agent","project":"alpha","cwd":"C:\\work\\alpha","session":"s1","agent":"spanharness:coder","agent_id":"id2026-10-02T10:00:00+09:00","model":"claude-sonnet-4-5-20250929","effort":"high","in":100,"out":10,"cache_read":1000,"cache_write":50,"tools":4,"turns":3,"ms":1000,"harness":"aaaa1111","missing":[]}
+   
+{"t":"2026-10-03T09:12:00+09:00","kind":"harness","harness":"aaaa1111","prev":null,"changed":[],"added":["a"," ",5,null,"b"],"removed":"x","plugin_version":"0.1.0"}{"t":"2026-10-04T10:00:00+09:00","kind":"agent","project":"alpha","cwd":"C:\\work\\alpha","session":"s1","agent":"coder","agent_id":"id2026-10-04T10:00:00+09:00","model":"claude-sonnet-4-5-20250929","effort":"high","in":300,"out":30,"cache_read":3000,"cache_write":150,"tools":8,"turns":5,"ms":3000,"harness":"bbbb2222","missing":[]}
+{"t":"2026-10-05T09:00:00+09:00","kind":"harness","harness":"bbbb2222","prev":"aaaa1111","changed":["plugin/agents/coder.md","z"],"added":["output-styles/x.md"],"removed":["gone.md"],"plugin_version":"0.1.1"}
+{"kind":"harness","plugin_version":"0.2.0"}{"t":"not a time","kind":"harness","harness":"cccc3333","prev":"bbbb2222"}
+{"t":"2026-10-06T10:00:00+09:00","kind":"turn","project":"alpha","cwd":"C:\\work\\alpha","session":"s1","model":"claude-opus-4-1-20250805","effort":"medium","in":60,"out":6,"cache_read":600,"cache_write":30,"tools":0,"turns":1,"ms":null,"harness":"bbbb2222","missing":["ms"]}
+[1,2]"text"
+42
+null{"kind":5}
+{"t":"2026-10-07T10:00:00+09:00","kind":"Agent"}
+{broken{"t":"2026-10-08T10:00:00+09:00","kind":"agent","project":"we|rd","cwd":"C:\\work\\we|rd","session":"s1","agent":"doc-writer","agent_id":"id2026-10-08T10:00:00+09:00","model":null,"effort":null,"in":10,"out":1,"cache_read":100,"cache_write":10,"tools":0,"turns":1,"ms":100,"harness":"aaaa1111","missing":["model"]}
+{"t":"2026-10-09T10:00:00+09:00","kind":"agent","agent":"  ","project":7,"model":"  ","harness":" ","missing":["","  ","in","in",5,null],"in":1.9,"out":"2","cache_read":true,"cache_write":4,"tools":9223372036854775808,"turns":-3,"ms":2.5}
+{"t":"2026-10-10T10:00:00Z","kind":"turn","missing":"model"}

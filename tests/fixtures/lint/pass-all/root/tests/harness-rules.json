@@ -1,0 +1,344 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "files.paths.ok",
+   "kind": "files",
+   "paths": [
+    "docs/a.md",
+    "README.md"
+   ]
+  },
+  {
+   "id": "files.dir.ok",
+   "kind": "files",
+   "dir": "agents",
+   "only": [
+    "a.md",
+    "b.md"
+   ]
+  },
+  {
+   "id": "front.keys.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "agents/a.md"
+   ],
+   "keys": [
+    "name",
+    "model",
+    "effort",
+    "skills"
+   ]
+  },
+  {
+   "id": "front.equals.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "agents/*.md"
+   ],
+   "equals": {
+    "name": "a"
+   },
+   "exclude": [
+    "agents/b.md"
+   ]
+  },
+  {
+   "id": "front.list.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "agents/a.md"
+   ],
+   "equals": {
+    "skills": [
+     "one",
+     "two"
+    ],
+    "model": "sonnet"
+   },
+   "absent": [
+    "tools"
+   ],
+   "nonEmpty": [
+    "name",
+    "skills"
+   ]
+  },
+  {
+   "id": "front.empty-value.ok",
+   "kind": "frontmatter",
+   "paths": [
+    "agents/b.md"
+   ],
+   "equals": {
+    "note": ""
+   },
+   "nonEmpty": [
+    "name"
+   ]
+  },
+  {
+   "id": "sections.order.ok",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "docs/a.md"
+   ],
+   "sections": [
+    "## One",
+    "## Three"
+   ]
+  },
+  {
+   "id": "sections.exact.ok",
+   "kind": "sectionsInOrder",
+   "paths": [
+    "docs/a.md"
+   ],
+   "sections": [
+    "## One",
+    "## Two",
+    "## Three"
+   ],
+   "exact": true
+  },
+  {
+   "id": "contains.text.ok",
+   "kind": "contains",
+   "paths": [
+    "docs/a.md"
+   ],
+   "text": "alpha beta"
+  },
+  {
+   "id": "contains.texts.ok",
+   "kind": "contains",
+   "paths": [
+    "docs/a.md"
+   ],
+   "texts": [
+    "alpha",
+    "gamma\ndelta"
+   ]
+  },
+  {
+   "id": "contains.whole-line.ok",
+   "kind": "contains",
+   "paths": [
+    "docs/a.md"
+   ],
+   "text": "\nsolo line\n"
+  },
+  {
+   "id": "contains.section.ok",
+   "kind": "contains",
+   "paths": [
+    "docs/a.md"
+   ],
+   "section": "## Two",
+   "text": "only in two"
+  },
+  {
+   "id": "contains.crlf.ok",
+   "kind": "contains",
+   "paths": [
+    "docs/crlf.md"
+   ],
+   "text": "line one\nline two\nline three\n"
+  },
+  {
+   "id": "contains.bom.ok",
+   "kind": "contains",
+   "paths": [
+    "docs/bom.md"
+   ],
+   "text": "bom body"
+  },
+  {
+   "id": "once.ok",
+   "kind": "containsOnce",
+   "paths": [
+    "docs/a.md"
+   ],
+   "texts": [
+    "unique-word",
+    "aaa"
+   ]
+  },
+  {
+   "id": "once.section.ok",
+   "kind": "containsOnce",
+   "paths": [
+    "docs/a.md"
+   ],
+   "section": "## Three",
+   "text": "repeat"
+  },
+  {
+   "id": "ends.ok",
+   "kind": "endsWithLine",
+   "paths": [
+    "docs/a.md"
+   ],
+   "line": "last line"
+  },
+  {
+   "id": "ends.crlf.ok",
+   "kind": "endsWithLine",
+   "paths": [
+    "docs/crlf.md"
+   ],
+   "line": "line three"
+  },
+  {
+   "id": "not.text.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "docs/**"
+   ],
+   "exclude": [
+    "docs/bad/**"
+   ],
+   "text": "forbidden"
+  },
+  {
+   "id": "not.regex.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "docs/a.md"
+   ],
+   "regex": "fo+bid(?!den)"
+  },
+  {
+   "id": "not.ignorecase.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "docs/a.md"
+   ],
+   "regex": "NOPE[0-9]",
+   "ignoreCase": true
+  },
+  {
+   "id": "not.section.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "docs/a.md"
+   ],
+   "section": "## One",
+   "text": "outside-one"
+  },
+  {
+   "id": "ascii.ok",
+   "kind": "asciiOnly",
+   "paths": [
+    "scripts/plain.ps1"
+   ]
+  },
+  {
+   "id": "json.equals.ok",
+   "kind": "json",
+   "paths": [
+    "data.json"
+   ],
+   "path": "name",
+   "equals": "box"
+  },
+  {
+   "id": "json.number.ok",
+   "kind": "json",
+   "paths": [
+    "data.json"
+   ],
+   "path": "count",
+   "equals": 3
+  },
+  {
+   "id": "json.bool.ok",
+   "kind": "json",
+   "paths": [
+    "data.json"
+   ],
+   "path": "flags.0",
+   "equals": true
+  },
+  {
+   "id": "json.nested.ok",
+   "kind": "json",
+   "paths": [
+    "data.json"
+   ],
+   "path": "items.1.tag",
+   "equals": "y"
+  },
+  {
+   "id": "json.any.ok",
+   "kind": "json",
+   "paths": [
+    "data.json"
+   ],
+   "path": "items.*.tag",
+   "anyContains": "y"
+  },
+  {
+   "id": "json.any-object.ok",
+   "kind": "json",
+   "paths": [
+    "data.json"
+   ],
+   "path": "map.*",
+   "anyContains": "ell"
+  },
+  {
+   "id": "glob.star.ok",
+   "kind": "contains",
+   "paths": [
+    "agents/*.md"
+   ],
+   "text": "---\nname: "
+  },
+  {
+   "id": "glob.starstar.ok",
+   "kind": "contains",
+   "paths": [
+    "deep/**/leaf.txt"
+   ],
+   "text": "leaf"
+  },
+  {
+   "id": "glob.starstar-zero.ok",
+   "kind": "contains",
+   "paths": [
+    "deep/**/top.txt"
+   ],
+   "text": "top"
+  },
+  {
+   "id": "glob.dir-all.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "deep/**"
+   ],
+   "text": "zzz",
+   "exclude": [
+    "deep/a/**"
+   ]
+  },
+  {
+   "id": "later.skipped.ok",
+   "kind": "files",
+   "group": "later",
+   "paths": [
+    "hooks/hooks.json"
+   ]
+  },
+  {
+   "id": "later.skipped-bad-kind.ok",
+   "kind": "nope",
+   "group": "later"
+  }
+ ]
+}

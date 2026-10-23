@@ -1,0 +1,6 @@
+exit 1
+accent.bad
+bom.bad
+control.bad
+del.bad
+invalid-utf8.bad

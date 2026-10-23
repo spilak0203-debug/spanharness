@@ -1,0 +1,1 @@
+errors_log_big claude/lessons/errors.log

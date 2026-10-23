@@ -1,0 +1,18 @@
+{
+  "name": "spanharness",
+  "description": "Marketplace for the spanharness plugin: an orchestrator output style, specialist subagents, and a lessons log.",
+  "owner": {
+    "name": "spilak0203-debug"
+  },
+  "plugins": [
+    {
+      "name": "spanharness",
+      "source": "./",
+      "description": "An orchestrator output style, a team of specialist subagents, and a lessons log that records every run so the harness can be improved with evidence.",
+      "author": {
+        "name": "spilak0203-debug",
+        "url": "https://github.com/spilak0203-debug"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "spanharness",
+  "version": "0.1.0",
+  "description": "An orchestrator output style, a team of specialist subagents, and a lessons log that records every run so the harness can be improved with evidence.",
+  "author": {
+    "name": "spilak0203-debug",
+    "url": "https://github.com/spilak0203-debug"
+  },
+  "homepage": "https://github.com/spilak0203-debug/spanharness",
+  "repository": "https://github.com/spilak0203-debug/spanharness",
+  "license": "MIT",
+  "keywords": [
+    "orchestrator",
+    "subagents",
+    "output-style",
+    "lessons",
+    "harness",
+    "workflow"
+  ]
+}

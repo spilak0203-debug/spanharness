@@ -1,0 +1,3 @@
+{"type":"user","timestamp":"2026-10-21T10:00:00.000Z","message":{"role":"user","content":"été café αβγ 😀"}}
+{"type":"assistant","timestamp":"2026-10-21T10:00:05.000Z","message":{"id":"α-1","model":"claude-sonnet-é-😀-1","content":[{"type":"tool_use","id":"τ-1"},{"type":"tool_use","id":"τ-2"}],"usage":{"input_tokens":1,"output_tokens":2,"cache_read_input_tokens":3,"cache_creation_input_tokens":4}}}
+{"type":"assistant","timestamp":"2026-10-21T10:00:06.000Z","message":{"id":"é-2","model":"claude-Über-σ","content":[],"usage":{"input_tokens":5,"output_tokens":6,"cache_read_input_tokens":7,"cache_creation_input_tokens":8}}}

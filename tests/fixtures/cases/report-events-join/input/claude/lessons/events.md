@@ -1,0 +1,15 @@
+# Events
+- 2026-10-03 | alpha | fix-request | refactor · small | coder | user: wanted a rename
+- 2026-10-04 | Alpha | Review-Block | feature · large | CODER | reviewer blocked
+- 2026-10-08 | alpha | redone | docs · small | coder | redone after a miss
+- 2026-10-09 | alpha | fix-request | docs · small | coder | user: asked for a fix
+- 2026-10-03 | alpha | fix-request | chat · small | main | user: asked again
+- 2026-10-13 | alpha | review-wrong | review · small | reviewer | finding was not a problem
+- 2026-10-15 | alpha | fix-request | docs · small | coder | no coder run that day
+- 2026-10-05 | gamma | fix-request | docs · small | coder | no run in that project
+- 2026-10-05 | alpha | redone | docs · small | designer | the harness changed that day
+- 2026-08-01 | alpha | fix-request | docs · small | coder | before the period
+- not a date | alpha | fix-request | docs · small | coder | not in the format
+- 2026-10-03 | alpha | review-wrong | x · y | Orchestrator | alias of main
+- 2026-10-03 | alpha | fix-request | x · y | spanharness:main | prefix, then main
+- 2026-10-04 | alpha | fix-request | x · y | SPANHARNESS:coder | prefix in upper case

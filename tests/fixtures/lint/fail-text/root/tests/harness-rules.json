@@ -1,0 +1,264 @@
+{
+ "version": 1,
+ "groups": {
+  "core": "always",
+  "later": "off until asked"
+ },
+ "rules": [
+  {
+   "id": "contains-one-missing.bad",
+   "kind": "contains",
+   "paths": [
+    "a.md"
+   ],
+   "texts": [
+    "uniq",
+    "absent"
+   ]
+  },
+  {
+   "id": "contains-case.bad",
+   "kind": "contains",
+   "paths": [
+    "a.md"
+   ],
+   "text": "UNIQ"
+  },
+  {
+   "id": "contains-two-files.bad",
+   "kind": "contains",
+   "paths": [
+    "a.md",
+    "b.md"
+   ],
+   "text": "uniq"
+  },
+  {
+   "id": "contains-multiline.ok",
+   "kind": "contains",
+   "paths": [
+    "a.md"
+   ],
+   "text": "foo bar\nuniq\n"
+  },
+  {
+   "id": "once-twice.bad",
+   "kind": "containsOnce",
+   "paths": [
+    "a.md"
+   ],
+   "text": "foo bar"
+  },
+  {
+   "id": "once-zero.bad",
+   "kind": "containsOnce",
+   "paths": [
+    "a.md"
+   ],
+   "text": "absent"
+  },
+  {
+   "id": "once-whole.ok",
+   "kind": "containsOnce",
+   "paths": [
+    "overlap.md"
+   ],
+   "text": "aaa"
+  },
+  {
+   "id": "once-overlap.ok",
+   "kind": "containsOnce",
+   "paths": [
+    "overlap.md"
+   ],
+   "text": "aa"
+  },
+  {
+   "id": "once-overlap-four.bad",
+   "kind": "containsOnce",
+   "paths": [
+    "overlap4.md"
+   ],
+   "text": "aa"
+  },
+  {
+   "id": "ends-other.bad",
+   "kind": "endsWithLine",
+   "paths": [
+    "a.md"
+   ],
+   "line": "uniq"
+  },
+  {
+   "id": "ends-trailing-blank.bad",
+   "kind": "endsWithLine",
+   "paths": [
+    "blank.md"
+   ],
+   "line": "last line"
+  },
+  {
+   "id": "ends-no-newline.bad",
+   "kind": "endsWithLine",
+   "paths": [
+    "nonl.md"
+   ],
+   "line": "last line"
+  },
+  {
+   "id": "ends-partial-line.bad",
+   "kind": "endsWithLine",
+   "paths": [
+    "a.md"
+   ],
+   "line": "line"
+  },
+  {
+   "id": "ends.ok",
+   "kind": "endsWithLine",
+   "paths": [
+    "a.md"
+   ],
+   "line": "last line"
+  },
+  {
+   "id": "not-literal.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "a.md"
+   ],
+   "text": "foo bar"
+  },
+  {
+   "id": "not-regex.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "a.md"
+   ],
+   "regex": "fo+ b.r"
+  },
+  {
+   "id": "not-regex-dot-newline.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "a.md"
+   ],
+   "regex": "bar.foo"
+  },
+  {
+   "id": "not-ignorecase.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "a.md"
+   ],
+   "text": "FOO BAR",
+   "ignoreCase": true
+  },
+  {
+   "id": "not-case-sensitive.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "a.md"
+   ],
+   "text": "FOO BAR"
+  },
+  {
+   "id": "not-lookahead.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "a.md"
+   ],
+   "regex": "foo (?!baz)"
+  },
+  {
+   "id": "not-glob-any-file.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "*.md"
+   ],
+   "text": "secret-word"
+  },
+  {
+   "id": "not-exclude.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "*.md"
+   ],
+   "exclude": [
+    "b.md"
+   ],
+   "text": "secret-word"
+  },
+  {
+   "id": "not-hangul-escape.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "greek.md"
+   ],
+   "regex": "[\u03b1-\u03c9]"
+  },
+  {
+   "id": "section-missing.bad",
+   "kind": "contains",
+   "paths": [
+    "a.md"
+   ],
+   "section": "## Absent",
+   "text": "x"
+  },
+  {
+   "id": "section-twice.bad",
+   "kind": "contains",
+   "paths": [
+    "twice.md"
+   ],
+   "section": "## Dup",
+   "text": "x"
+  },
+  {
+   "id": "section-text-outside.bad",
+   "kind": "contains",
+   "paths": [
+    "a.md"
+   ],
+   "section": "## Only",
+   "text": "# T"
+  },
+  {
+   "id": "section-text-inside.ok",
+   "kind": "contains",
+   "paths": [
+    "a.md"
+   ],
+   "section": "## Only",
+   "text": "uniq"
+  },
+  {
+   "id": "section-ends-before-next.ok",
+   "kind": "mustNotContain",
+   "paths": [
+    "two.md"
+   ],
+   "section": "## A",
+   "text": "in-b"
+  },
+  {
+   "id": "section-level3-stays.bad",
+   "kind": "mustNotContain",
+   "paths": [
+    "two.md"
+   ],
+   "section": "## A",
+   "text": "sub-text"
+  },
+  {
+   "id": "section-once.bad",
+   "kind": "containsOnce",
+   "paths": [
+    "a.md"
+   ],
+   "section": "## Only",
+   "text": "foo bar"
+  }
+ ]
+}
