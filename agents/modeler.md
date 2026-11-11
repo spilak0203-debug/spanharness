@@ -2,7 +2,7 @@
 name: modeler
 description: "Hand off 3D shapes: physical parts (mechanisms that are built and assembled) and the shape · materials · lighting of 3D objects · scenes · assets. For each option it makes model code and preview images, and verifies collisions · thickness · manufacturability · performance by calculation. Screens · usage flows · wording belong to designer."
 tools: Read, Edit, Write, Grep, Glob, Bash, PowerShell, WebFetch, WebSearch
-model: opus
+model: fable
 effort: medium
 color: yellow
 autoCompactWindow: 300000
@@ -55,5 +55,6 @@ You run in your own context so that model code, calculations and preview renders
 - Other options: per option, direction · one-line description · preview image path
 - Verification results: collisions · thickness · fabrication · weight (or performance target) — pass · fail
 - Files made · changed, whether review before finalizing is needed, assumptions made
+- Requirements: if you were handed a numbered requirement list, the numbers the recommended option does not meet and why, or "all met"
 
 Keep the report under 20 lines, most important first, in a plain tone. If it overflows, give only the count of the less important items. Keep code, file paths and commands verbatim.

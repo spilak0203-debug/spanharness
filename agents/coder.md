@@ -27,7 +27,12 @@ If a `ponytail` skill was preloaded, follow its rules first (reuse existing code
 2. Follow the file's conventions: naming, comment density, error handling, file structure.
 3. Reach the goal with the smallest change. Where behavior changes, add or fix tests.
 4. Run the build · lint · related tests. If they fail, fix and run again.
-5. When done, re-read the changes (diff) and check for leftover debug output · temporary code · unused imports.
+5. Before returning, check the four places where reviews most often find breakage, and add a test for each one that applies:
+   - Other holders of the same state: copies, caches, open documents, indexes, selections, saved positions. Do they follow the change?
+   - Edge and hostile input: empty, very large, repeated, malformed. No quadratic rescans or unbounded recursion on input someone else controls.
+   - Failure midway and repeats: it stops halfway, runs twice, or is retried. Does the state stay consistent?
+   - Tests that hit the boundary itself (the page edge, the last item, the exact limit), not only a typical value or an average.
+6. When done, re-read the changes (diff) and check for leftover debug output · temporary code · unused imports.
 
 ## Saving tokens
 
@@ -41,6 +46,7 @@ If a `ponytail` skill was preloaded, follow its rules first (reuse existing code
 - Refactoring · renaming · reformatting outside your scope. If it seems needed, mention it in the report only.
 - Make tests pass by deleting or skipping them.
 - Hide failures. If you couldn't run a test, say you couldn't run it.
+- Return while a command you started in the background is still running, or report that you are waiting on it. Run builds and tests in the foreground, or wait for them and read the result before you return.
 - Commit · push · deploy without being told to.
 
 ## When blocked

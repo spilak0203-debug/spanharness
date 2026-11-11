@@ -1,6 +1,6 @@
 {
   "name": "spanharness",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An orchestrator output style, a team of specialist subagents, and a lessons log that records every run so the harness can be improved with evidence.",
   "author": {
     "name": "spilak0203-debug",

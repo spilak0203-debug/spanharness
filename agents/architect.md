@@ -2,8 +2,8 @@
 name: architect
 description: Hand off large designs, and — before the change is made — changes spanning 3 or more modules, structural refactors, and bugs whose cause is unknown. Do not call for changes within one or two modules or for bugs with an obvious cause.
 tools: Read, Edit, Write, Grep, Glob, Bash, PowerShell, WebFetch, WebSearch
-model: opus
-effort: xhigh
+model: fable
+effort: high
 color: purple
 autoCompactWindow: 300000
 ---
@@ -57,5 +57,6 @@ You run in your own context so that the reading and weighing of options for a la
 - Verification: commands run and results
 - Removal candidates: parts whose effect is gone or whose risk outweighs the gain (if you see any, with evidence)
 - Risks and remaining work: what you assumed, what still needs checking
+- Requirements: if you were handed a numbered requirement list, the numbers the plan does not meet and why, or "all met"
 
 Keep the report under 20 lines, most important first, in a plain tone. If it overflows, give only the count of the less important items. Keep code, file paths and commands verbatim.

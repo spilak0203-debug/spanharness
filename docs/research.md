@@ -27,3 +27,30 @@ Observed on Linux with Claude Code 2.1.308.
 10. A directory marketplace with `source: "./"` loads the plugin in place (`${CLAUDE_PLUGIN_ROOT}` is the source dir), although `installed_plugins.json` `installPath` shows a cache copy. Apply mode on a local clone therefore works.
 11. `validate`, `marketplace add` and `install` work without login (with a sandbox `CLAUDE_CONFIG_DIR`).
 12. `validate --strict` needs `author` in `plugin.json` and `description` in `marketplace.json`. README, LICENSE and icon only matter with `--profile directory`.
+
+## Model choice per role: Claude Fable 5.2 (checked 2026-11-11)
+
+Question: which roles should run on `fable` (Claude Fable 5.2) instead of `opus` (Claude Opus 5.5)?
+
+- Official guidance: start with Opus, and move to Fable 5.2 where evals on Opus at higher effort still fall short. Effort default is `high`; use `xhigh` only for the hardest long-running coding and agentic work where a gain is measured. Price $8 / $40 per million tokens (Opus 5.5: $4 / $20). Source: https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2 (official).
+- Launch numbers, all self-reported by Anthropic; no independent results yet. Source: https://llm-stats.com/blog/research/claude-fable-5-2-launch, cross-checked for SWE-bench Pro and FrontierSWE v2 against https://benchlm.ai/models/claude-fable-5-2. SWE-bench Multimodal differs across sources (74.1% self-reported, 62.29% on https://www.vals.ai/models/anthropic_claude-fable-5-2).
+
+| Benchmark | Fable 5.2 | Opus 5.5 | Bears on |
+|---|---|---|---|
+| BenchCAD 2.1 Core, with tools | 83.5 | 65.3 | modeler |
+| BenchCAD, without tools | 75.4 | 49.0 | modeler |
+| RoboDojo Sim | 64.9% | 39.4% | modeler (mechanisms) |
+| SWE-bench Multimodal | 74.1% | 61.4% | designer (screens), weak |
+| Chartography, no tools | 73.4% | 64.4% | designer (visual), weak |
+| GDPval-AA v2.1 Elo | 1831 | 1866 | designer (wording, knowledge work), favours Opus |
+| FrontierSWE v2 | 69.9% | 62.3% | architect, coder |
+| SWE-bench Pro | 93.0% | 89.9% | coder |
+
+- Effort on Fable 5.2, FrontierCode 2.0 (self-reported): high 45.3% at $6.72 per task, xhigh 49.1% at $14.19, max 45.7% at $44.70.
+- No published benchmark covers code review or bug finding, creative writing, or UI design.
+
+Conclusions:
+- modeler on `fable`: supported by the CAD and simulation rows (evidence: self-reported, confidence medium).
+- designer on `fable`: not decided by benchmarks; visual rows favour Fable, knowledge-work rows favour Opus. Moved to `fable` as a trial, judged by the lessons records (confidence low).
+- architect on `fable` at `high`: the long-horizon rows favour Fable, and on FrontierCode 2.0 Fable at `high` (45.3%) matches the best Opus setting (45.5% at `max`) at about half the cost of Fable at `xhigh`. No benchmark measures design quality directly (evidence: self-reported, confidence medium).
+- deep-reviewer stays at `xhigh`: no review benchmark, and on coding `xhigh` is the only level above `high` that gains (confidence low).
