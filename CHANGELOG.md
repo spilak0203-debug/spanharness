@@ -5,6 +5,7 @@
 - `coder` checks other holders of the same state, edge and hostile input, failure midway and repeats, and boundary tests before it returns, and does not return while a background command is still running.
 - `architect`, `designer` and `modeler` report which of the requirement numbers they were handed their result does not meet.
 - `designer` and `modeler` run on `fable` instead of `opus`.
+- `architect` runs on `fable` at effort `high` instead of `opus` at `xhigh`.
 - `scripts/prices.json` has Claude Fable 5.2 ($8 / $40 per million tokens, cache write $10, cache read $0.20).
 
 ## 0.1.0 - 2026-10-23

@@ -52,4 +52,5 @@ Question: which roles should run on `fable` (Claude Fable 5.2) instead of `opus`
 Conclusions:
 - modeler on `fable`: supported by the CAD and simulation rows (evidence: self-reported, confidence medium).
 - designer on `fable`: not decided by benchmarks; visual rows favour Fable, knowledge-work rows favour Opus. Kept on `fable` as a trial, judged by the lessons records (confidence low).
+- architect on `fable` at `high`: the long-horizon rows favour Fable, and on FrontierCode 2.0 Fable at `high` (45.3%) matches the best Opus setting (45.5% at `max`) at about half the cost of Fable at `xhigh`. No benchmark measures design quality directly (evidence: self-reported, confidence medium).
 - deep-reviewer stays at `xhigh`: no review benchmark, and on coding `xhigh` is the only level above `high` that gains (confidence low).

@@ -37,7 +37,7 @@ Each role is a subagent named `spanharness:<name>`. The orchestrator picks the r
 
 | Role | Model · effort | Purpose |
 |---|---|---|
-| `spanharness:architect` | opus · xhigh | Large designs, changes spanning 3 or more modules, structural refactors, and bugs whose cause is unknown (before the fix). |
+| `spanharness:architect` | fable · high | Large designs, changes spanning 3 or more modules, structural refactors, and bugs whose cause is unknown (before the fix). |
 | `spanharness:coder` | sonnet · high | Implementation or bug fixes with a defined scope. |
 | `spanharness:reviewer` | opus · high | Routine review of a change of more than 2 files or 50 changed lines. Finds what will break, missing tests and risky changes; fixes nothing. |
 | `spanharness:deep-reviewer` | fable · xhigh | Review of changes of 5 or more files or 300 or more changed lines, and anything touching money, orders, security, personal data or irreversible data changes. Gives the fit-to-ship judgment; fixes nothing. |
@@ -53,7 +53,7 @@ The plugin also ships one skill, `spanharness:new-project`, which settles requir
 
 ### If `fable` is not available to you
 
-`deep-reviewer`, `designer` and `modeler` run on the `fable` model. If your account cannot use it, ask the orchestrator to call the role with `model: opus` for that run. To change it for good, edit `model:` in `agents/<role>.md` of a local clone (see [Development](#development)). The repository's own `lint` pins `fable`, so a clone edited this way fails `lint` until the rule `agent.<role>.frontmatter` in `tests/harness-rules.json` is changed too.
+`architect`, `deep-reviewer`, `designer` and `modeler` run on the `fable` model. If your account cannot use it, ask the orchestrator to call the role with `model: opus` for that run. To change it for good, edit `model:` in `agents/<role>.md` of a local clone (see [Development](#development)). The repository's own `lint` pins `fable`, so a clone edited this way fails `lint` until the rule `agent.<role>.frontmatter` in `tests/harness-rules.json` is changed too.
 
 ## Optional skills
 

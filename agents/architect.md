@@ -2,8 +2,8 @@
 name: architect
 description: Hand off large designs, and — before the change is made — changes spanning 3 or more modules, structural refactors, and bugs whose cause is unknown. Do not call for changes within one or two modules or for bugs with an obvious cause.
 tools: Read, Edit, Write, Grep, Glob, Bash, PowerShell, WebFetch, WebSearch
-model: opus
-effort: xhigh
+model: fable
+effort: high
 color: purple
 autoCompactWindow: 300000
 ---
