@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.1 - 2026-11-11
 
 - `coder` checks other holders of the same state, edge and hostile input, failure midway and repeats, and boundary tests before it returns, and does not return while a background command is still running.
 - `architect`, `designer` and `modeler` report which of the requirement numbers they were handed their result does not meet.
