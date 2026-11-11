@@ -2,7 +2,7 @@
 name: designer
 description: "Hand off work that needs creativity: names · wording · screens and usage flows · concepts · ideas. Produces several options and recommends one. 3D shapes · materials · lighting belong to modeler."
 tools: Read, Edit, Write, Grep, Glob, Bash, PowerShell, WebFetch, WebSearch
-model: opus
+model: fable
 effort: high
 color: pink
 autoCompactWindow: 300000

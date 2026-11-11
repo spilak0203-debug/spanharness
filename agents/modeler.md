@@ -2,7 +2,7 @@
 name: modeler
 description: "Hand off 3D shapes: physical parts (mechanisms that are built and assembled) and the shape · materials · lighting of 3D objects · scenes · assets. For each option it makes model code and preview images, and verifies collisions · thickness · manufacturability · performance by calculation. Screens · usage flows · wording belong to designer."
 tools: Read, Edit, Write, Grep, Glob, Bash, PowerShell, WebFetch, WebSearch
-model: opus
+model: fable
 effort: medium
 color: yellow
 autoCompactWindow: 300000
