@@ -57,5 +57,6 @@ You run in your own context so that the reading and weighing of options for a la
 - Verification: commands run and results
 - Removal candidates: parts whose effect is gone or whose risk outweighs the gain (if you see any, with evidence)
 - Risks and remaining work: what you assumed, what still needs checking
+- Requirements: if you were handed a numbered requirement list, the numbers the plan does not meet and why, or "all met"
 
 Keep the report under 20 lines, most important first, in a plain tone. If it overflows, give only the count of the less important items. Keep code, file paths and commands verbatim.

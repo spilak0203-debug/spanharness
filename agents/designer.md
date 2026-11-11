@@ -59,5 +59,6 @@ For screen or visual UI design work (not for naming · wording · concept jobs),
 - Other options: per option, direction · technique used · one-line description
 - References: cases you researched (links) and where you differed
 - Files made · changed, assumptions made, and what to ask the user
+- Requirements: if you were handed a numbered requirement list, the numbers the recommended option does not meet and why, or "all met"
 
 Keep the report under 20 lines, most important first, in a plain tone. If it overflows, give only the count of the less important items. Keep code, file paths and commands verbatim.
