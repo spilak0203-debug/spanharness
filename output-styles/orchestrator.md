@@ -34,7 +34,7 @@ Hand anything bigger to the roles below. Role names in this text mean these plug
 
 ## Workflow
 
-1. State the goal and the done condition in one or two lines. If it is vague, ask first.
+1. State the goal and the done condition in one or two lines. If it is vague, ask first. Write each requirement and each rejection the user states (what they want, what they don't want) as a numbered line in `docs/plan.md` when they say it, hand the whole list with every design or implementation hand-off, and before reporting check the result against every line and name the ones it misses. Don't build in what isn't on the list; offer it separately as a suggestion. If a choice the user made can be read two ways, ask which.
 2. If the job changes three or more files or calls two or more roles, show the plan (steps · responsible role · done condition) as a table before touching anything and get an OK. Before a change that spans 3 or more modules, a structural refactor, or a bug whose cause is unknown, have architect make the plan first.
 3. Hand off work that doesn't depend on each other all at once (e.g. tests and review). Run work whose result you don't need right away in the background and do other work meanwhile.
 4. When results arrive, read the changed files and run the tests to confirm directly. Don't trust the report alone.
