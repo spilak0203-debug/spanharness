@@ -2,7 +2,7 @@
 
 spanharness is a Claude Code plugin with three parts:
 
-- An **orchestrator output style** that splits work and hands it to 11 specialist subagents, then checks and merges what they return.
+- An **orchestrator output style** that splits work and hands it to 12 specialist subagents, then checks and merges what they return.
 - A **lessons log** that records every subagent run and every main-conversation turn: tokens, cost inputs, duration and a fingerprint of the harness (the roles, the style and the skills in use).
 - A **harness advisor** that reads the log and proposes improvements to the roles, the style and the instructions, with evidence.
 
@@ -13,7 +13,7 @@ spanharness is a Claude Code plugin with three parts:
 /plugin install spanharness@spanharness
 ```
 
-Requirements for the lessons log (the style and the agents need nothing extra):
+Requirements for the lessons log (the style and the agents need nothing extra, except `circuit`, which needs KiCad 10 and, per stage, SKiDL, Java with Freerouting, and easyeda2kicad; it does not install them):
 
 - Windows: Windows PowerShell 5.1, which is built in.
 - macOS and Linux: Python 3.8 or newer.
@@ -40,20 +40,21 @@ Each role is a subagent named `spanharness:<name>`. The orchestrator picks the r
 | `spanharness:architect` | fable · high | Large designs, changes spanning 3 or more modules, structural refactors, and bugs whose cause is unknown (before the fix). |
 | `spanharness:coder` | sonnet · high | Implementation or bug fixes with a defined scope. |
 | `spanharness:reviewer` | opus · high | Routine review of a change of more than 2 files or 50 changed lines. Finds what will break, missing tests and risky changes; fixes nothing. |
-| `spanharness:deep-reviewer` | fable · xhigh | Review of changes of 5 or more files or 300 or more changed lines, and anything touching money, orders, security, personal data or irreversible data changes. Gives the fit-to-ship judgment; fixes nothing. |
+| `spanharness:deep-reviewer` | fable · xhigh | Review of changes of 5 or more files or 300 or more changed lines, and anything touching money, orders, security, personal data or irreversible data changes, plus physical designs that affect purchases and circuit or board designs to be built and powered. Gives the fit-to-ship judgment; fixes nothing. |
 | `spanharness:tester` | sonnet · high | Writes and runs tests to confirm the code works (pass or fail), and lists candidate causes on failure. |
 | `spanharness:experimenter` | opus · high | Finds out by numbers whether a candidate beats a baseline: frozen setup, repeated runs, mean ± SEM, a verdict. Logs every attempt in `docs/experiments.md`. |
 | `spanharness:researcher` | sonnet · medium | Researches a question across several sources, checks each key claim against two independent sources, and writes findings to `docs/research.md`. |
 | `spanharness:doc-writer` | sonnet · high | Writes or fixes README files, user guides, changelogs and comments. Does not modify code. |
 | `spanharness:designer` | fable · high | Creative work: names, wording, screens and usage flows, concepts. Produces several options and recommends one. |
 | `spanharness:modeler` | fable · medium | 3D shapes, materials and lighting. Makes model code and preview images, and checks collisions, thickness and manufacturability by calculation. |
+| `spanharness:circuit` | fable · high | Circuit boards in KiCad, from schematic and footprints through layout, routing and DRC to Gerber, BOM and placement files ready to order, plus wiring between modules. Checks current, voltage drop and logic levels by calculation. |
 | `spanharness:harness-advisor` | opus · high | Proposes harness improvements from the lessons, or plans an A/B comparison. Runs only when you ask (see [Harness advisor](#harness-advisor)). |
 
 The plugin also ships one skill, `spanharness:new-project`, which settles requirements by asking questions before any code or design when you start a new project in an empty folder.
 
 ### If `fable` is not available to you
 
-`architect`, `deep-reviewer`, `designer` and `modeler` run on the `fable` model. If your account cannot use it, ask the orchestrator to call the role with `model: opus` for that run. To change it for good, edit `model:` in `agents/<role>.md` of a local clone (see [Development](#development)). The repository's own `lint` pins `fable`, so a clone edited this way fails `lint` until the rule `agent.<role>.frontmatter` in `tests/harness-rules.json` is changed too.
+`architect`, `circuit`, `deep-reviewer`, `designer` and `modeler` run on the `fable` model. If your account cannot use it, ask the orchestrator to call the role with `model: opus` for that run. To change it for good, edit `model:` in `agents/<role>.md` of a local clone (see [Development](#development)). The repository's own `lint` pins `fable`, so a clone edited this way fails `lint` until the rule `agent.<role>.frontmatter` in `tests/harness-rules.json` is changed too.
 
 ## Optional skills
 

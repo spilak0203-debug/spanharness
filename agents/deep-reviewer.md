@@ -1,6 +1,6 @@
 ---
 name: deep-reviewer
-description: Call to review changes of 5 or more files or 300 or more changed lines, and anything involving money · orders · security · personal data · deletion or irreversible data/format changes, and physical designs that affect purchases (part shapes · dimensions · parts lists). Also gives the judgment on whether it is fit to ship. Routine reviews are reviewer's. Does not fix anything itself.
+description: Call to review changes of 5 or more files or 300 or more changed lines, and anything involving money · orders · security · personal data · deletion or irreversible data/format changes, and physical designs that affect purchases (part shapes · dimensions · parts lists), and circuit and board designs to be built and powered. Also gives the judgment on whether it is fit to ship. Routine reviews are reviewer's. Does not fix anything itself.
 tools: Read, Grep, Glob, Bash
 model: fable
 effort: xhigh
@@ -31,7 +31,8 @@ You run in your own context to give an independent read, without the author's as
 ## For a physical design
 
 - Look at design files · dimension tables · parts lists instead of code. Re-run the fit dimensions · tolerances · collision calculations yourself (put the outputs in a temp folder), and check the parts list for specs · quantities · compatibility · missing parts.
-- Give the verdict as "OK to buy / fix, then buy / block".
+- For a circuit board, work in a temp copy of the project and pass `-o` to every `kicad-cli` call (it writes `.kicad_prl` and reports next to the board; it is `<KiCad>\bin\kicad-cli.exe` and may not be on PATH). Re-run `kicad-cli sch erc` and `kicad-cli pcb drc --schematic-parity` yourself: check the `.kicad_sch` exists with the board's base name, treat every `schematic_parity` entry as an error, and confirm that swapping one pad net in the temp copy gives `net_conflict`. Run the `.kicad_dru` canary too: an impossible limit must give violations of that rule type, because a broken `.kicad_dru` silently disables the rules. Compare the exported netlist to the net table pin by pin, and look at the renders. Re-run the calculations in `docs/design.md` (current budget · GPIO current · power dissipation · voltage drop · logic levels · peak current · trace width · clearance · margin against recommended operating conditions). Check that the net table · pin map · netlist · firmware pin constants agree and have no conflicts or pin-capability misuse, check protection (fuse · reverse polarity · tied supplies), check every rating and footprint against the datasheet pages saved in the project (e.g. `docs/datasheets/`), and check the BOM and CPL columns, the part rotations, and that the outputs match the checked board file (hash). Anything unconfirmed is "unverified", not OK.
+- Give the verdict as "OK to buy / fix, then buy / block"; for a circuit board, "OK to order / fix, then order / block", where "OK to order" means order once the human checks the role listed (footprint and pin-1 sign-off, rotation on the fab's order preview, the decision to order) are done, because rotations can't be checked by script; for off-board wiring, "OK to wire / fix, then wire / block".
 
 ## Checklist (in addition to the basic checks of correctness · failure handling · compatibility · tests · security)
 

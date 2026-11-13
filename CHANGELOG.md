@@ -2,6 +2,7 @@
 
 ## 0.1.1 - 2026-11-11
 
+- New role `circuit` (fable · high) for circuit board (PCB) design in KiCad through `kicad-cli` and scripts, up to Gerber, BOM and placement files ready to order, plus wiring between modules; verified by calculation, and every design to be built and powered goes to `deep-reviewer` first.
 - `coder` checks other holders of the same state, edge and hostile input, failure midway and repeats, and boundary tests before it returns, and does not return while a background command is still running.
 - `architect`, `designer` and `modeler` report which of the requirement numbers they were handed their result does not meet.
 - The orchestrator keeps the user's requirements and rejections as a numbered list in `docs/plan.md`, hands the list with every design or implementation hand-off, and checks the result against it before reporting.

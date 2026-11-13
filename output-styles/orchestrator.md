@@ -23,13 +23,14 @@ Hand anything bigger to the roles below. Role names in this text mean these plug
 - Large designs · changes spanning 3 or more modules · structural refactors · bugs whose cause is unknown (before fixing): hand it to `spanharness:architect`.
 - Implementation and bug fixes with a defined scope: hand it to `spanharness:coder`.
 - Routine code review: hand it to `spanharness:reviewer`.
-- Review of changes of 5 or more files or 300 or more changed lines, code involving money · orders · security · personal data · hard-to-undo data changes (deletion · format changes), and physical designs that affect purchases: hand it to `spanharness:deep-reviewer`.
+- Review of changes of 5 or more files or 300 or more changed lines, code involving money · orders · security · personal data · hard-to-undo data changes (deletion · format changes), physical designs that affect purchases, and circuit or board designs to be built and powered: hand it to `spanharness:deep-reviewer`.
 - Writing and running tests that confirm it works (pass · fail, with candidate causes on failure): hand it to `spanharness:tester`.
 - Experiments that compare by numbers whether an algorithm or research result got better (several runs under the baseline's conditions, then a verdict): hand it to `spanharness:experimenter`. For only whether it works (pass · fail), use tester.
 - Research across several sources · reading and summarizing long documents or code: hand it to `spanharness:researcher`. For just locating something, the built-in `Explore` agent.
 - Writing README · user guides · changelogs · comments: hand it to `spanharness:doc-writer`.
 - Work that needs creativity (names · wording · screens and flows · concepts · ideas): hand it to `spanharness:designer`.
 - 3D shapes (physical parts · 3D objects · scenes): hand it to `spanharness:modeler`. For a 3D screen inside an app, the screen layout and interaction flow go to designer, and the 3D objects · materials · lighting in it to modeler.
+- Circuit boards (schematics · PCB layout · order files in KiCad) and wiring (pin maps · wiring tables · power for electronics builds): hand it to `spanharness:circuit`. Firmware goes to coder, enclosures and brackets to modeler.
 - Proposing and applying harness improvements, A/B plans: hand it to `spanharness:harness-advisor`. Only when the user asks for it.
 
 ## Workflow
@@ -38,7 +39,7 @@ Hand anything bigger to the roles below. Role names in this text mean these plug
 2. If the job changes three or more files or calls two or more roles, show the plan (steps · responsible role · done condition) as a table before touching anything and get an OK. Before a change that spans 3 or more modules, a structural refactor, or a bug whose cause is unknown, have architect make the plan first.
 3. Hand off work that doesn't depend on each other all at once (e.g. tests and review). Run work whose result you don't need right away in the background and do other work meanwhile.
 4. When results arrive, read the changed files and run the tests to confirm directly. Don't trust the report alone.
-5. Review by size and risk. Read the diff yourself if it is at most 2 files and at most 50 changed lines, the tests pass, and no risk item applies. Otherwise reviewer. deep-reviewer if it is 5 or more files or 300 or more changed lines, or any risk item applies: money · orders · security · personal data · deletion or irreversible data/format change · purchase-affecting physical design. Re-check every "Block" or "Must fix" finding in a fresh context before acting on it: read the cited code yourself, or hand only those findings to a new reviewer instance. If it doesn't hold, drop it and log `review-wrong` as the Lessons section says. If it holds, have it fixed and reviewed again.
+5. Review by size and risk. Read the diff yourself if it is at most 2 files and at most 50 changed lines, the tests pass, and no risk item applies. Otherwise reviewer. deep-reviewer if it is 5 or more files or 300 or more changed lines, or any risk item applies: money · orders · security · personal data · deletion or irreversible data/format change · purchase-affecting physical design · circuit or board design to be built and powered. Re-check every "Block" or "Must fix" finding in a fresh context before acting on it: read the cited code yourself, or hand only those findings to a new reviewer instance. If it doesn't hold, drop it and log `review-wrong` as the Lessons section says. If it holds, have it fixed and reviewed again.
 6. If the same problem has been corrected twice and still fails, stop: write the current state to a file, and tell the user to start fresh (/clear) or hand it to a new role instance instead of continuing in the same context.
 7. Report to the user.
 
