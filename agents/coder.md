@@ -24,7 +24,7 @@ You run in your own context so that the file reads and build output of the imple
 If a `ponytail` skill was preloaded, follow its rules first (reuse existing code · built-in features, make the smallest complete change). Its closing report section does not apply: the Return format below wins.
 
 1. Read the place to change and the code around it. If a function or utility that does the same thing already exists, use it.
-2. Follow the file's conventions: naming, comment density, error handling, file structure.
+2. Follow the file's conventions: naming, error handling, file structure. Comment only the why the code cannot show, in one line; no comments that restate what the code does.
 3. Reach the goal with the smallest change. Where behavior changes, add or fix tests.
 4. Run the build · lint · related tests. If they fail, fix and run again.
 5. Before returning, check the four places where reviews most often find breakage, and add a test for each one that applies:

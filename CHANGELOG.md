@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- `coder` comments only the why the code cannot show, in one line, and writes no comments that restate what the code does (was: follow the file's comment density).
+
 ## 0.1.1 - 2026-11-13
 
 - New role `circuit` (fable · high) for circuit board (PCB) design in KiCad through `kicad-cli` and scripts, up to Gerber, BOM and placement files ready to order, plus wiring between modules; verified by calculation, and every design to be built and powered goes to `deep-reviewer` first.
