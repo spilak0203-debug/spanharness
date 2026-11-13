@@ -67,8 +67,8 @@ Every rule is in `core`. A rules file may define more groups: `lint` runs only `
 
 ## Rule inventory
 
-157 rules: contains 87, mustNotContain 28, frontmatter 13 (11 roles, orchestrator, skill), containsOnce 13, json 6, sectionsInOrder 4, files 3, endsWithLine 2, asciiOnly 1. All 157 are in `core`.
+163 rules: contains 91, mustNotContain 28, frontmatter 14 (12 roles, orchestrator, skill), containsOnce 14, json 6, sectionsInOrder 4, files 3, endsWithLine 2, asciiOnly 1. All 163 are in `core`.
 
 Id prefixes: `files.*` · `agent.<role>.*` (one role) · `agents.*` (all or several roles) · `orch.*` (orchestrator) · `skill.*` · `plugin.*` / `marketplace.*` · `hooks.*` · `scripts.*` · `forbid.*` (must-not-contain over `agents`, `output-styles`, `skills`, `README.md`, `docs`, `hooks`, `scripts`: Hangul, `Korean`, `in English`, `user's language`, `/home/[a-z]`, `C:\\Users\\[A-Za-z]`, `/Users/[A-Za-z]`, `/tmp/claude`, `Co-Authored-By`, `@gmail.com`).
 
-Every one of the 11 agents has `## Input`, so `agents.sections.required` (Input, Workflow, Do not, Return in order) applies to all.
+Every one of the 12 agents has `## Input`, so `agents.sections.required` (Input, Workflow, Do not, Return in order) applies to all.

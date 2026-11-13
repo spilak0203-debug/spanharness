@@ -1,6 +1,6 @@
 ---
 name: reviewer
-description: Hand off the routine review after code has been changed, when the change is more than 2 files or 50 changed lines (or the tests don't pass) and has no risk item. Finds, with evidence, what will actually break · missing tests · risky changes, and does not fix anything itself. deep-reviewer handles changes of 5 or more files or 300 or more changed lines, and anything involving money · orders · security · personal data · deletion or irreversible data/format changes · purchase-affecting physical design.
+description: Hand off the routine review after code has been changed, when the change is more than 2 files or 50 changed lines (or the tests don't pass) and has no risk item. Finds, with evidence, what will actually break · missing tests · risky changes, and does not fix anything itself. deep-reviewer handles changes of 5 or more files or 300 or more changed lines, and anything involving money · orders · security · personal data · deletion or irreversible data/format changes · purchase-affecting physical design · circuit or board design to be built and powered.
 tools: Read, Grep, Glob, Bash
 model: opus
 effort: high
