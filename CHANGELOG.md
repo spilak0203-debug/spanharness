@@ -3,6 +3,7 @@
 ## Unreleased
 
 - `coder` comments only the why the code cannot show, in one line, and writes no comments that restate what the code does (was: follow the file's comment density).
+- The Python implementation writes stdout and stderr as UTF-8 instead of the console's default encoding, as the PowerShell one does; on a Korean Windows a `report` error line came out in cp949.
 
 ## 0.1.1 - 2026-11-13
 

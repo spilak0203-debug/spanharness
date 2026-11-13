@@ -2027,4 +2027,7 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
+    for _stream in (sys.stdout, sys.stderr):  # the console default (cp949 etc.) would differ from the PowerShell side (6.2)
+        if _stream is not None:  # no console (pythonw): record must still exit 0
+            _stream.reconfigure(encoding="utf-8", errors="replace")
     sys.exit(main())
