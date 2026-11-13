@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.1 - 2026-11-11
+## 0.1.1 - 2026-11-13
 
 - New role `circuit` (fable · high) for circuit board (PCB) design in KiCad through `kicad-cli` and scripts, up to Gerber, BOM and placement files ready to order, plus wiring between modules; verified by calculation, and every design to be built and powered goes to `deep-reviewer` first.
 - `coder` checks other holders of the same state, edge and hostile input, failure midway and repeats, and boundary tests before it returns, and does not return while a background command is still running.
