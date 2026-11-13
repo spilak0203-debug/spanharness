@@ -13,7 +13,7 @@ spanharness is a Claude Code plugin with three parts:
 /plugin install spanharness@spanharness
 ```
 
-Requirements for the lessons log (the style and the agents need nothing extra, except `circuit`, which needs KiCad 10 and, per stage, SKiDL, Java with Freerouting, and easyeda2kicad; it does not install them):
+Requirements for the lessons log (the style and the agents need nothing extra, except `circuit`, which needs KiCad 10 and, per stage, SKiDL, Java 25 or newer with the Freerouting jar, and easyeda2kicad; it does not install them):
 
 - Windows: Windows PowerShell 5.1, which is built in.
 - macOS and Linux: Python 3.8 or newer.
